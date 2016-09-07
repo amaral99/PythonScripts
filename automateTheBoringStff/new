@@ -1,0 +1,42 @@
+<style>
+.special {
+	color: blue;
+}
+</style>
+
+<html>
+	<head>
+		<title>Dom traversal</title>
+	
+		<script src="jquery-3.0.0.js"></script>
+	</head>
+
+<body>
+	<ul class="list">
+		<li>one</li>
+		<li class="special">two</li>
+		<li>three</li>
+		<li>
+			<ul class="sublist">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<script>
+		/*$(function() {
+		  $('li').on('click', function() {
+		    $(this).parent().addClass('special');
+		  });
+		});*/
+		
+		$(function() {
+		  $('.special').on('click', function() {
+		    alert('special');
+		  });
+		});
+	</script>
+</body>
+</html>
